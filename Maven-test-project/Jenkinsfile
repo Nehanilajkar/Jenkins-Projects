@@ -10,5 +10,10 @@ pipeline{
         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Nehanilajkar/Jenkins-Projects.git']])
       }
     }
+    stage('Docker build'){
+      steps{
+        docker build -t mvn:1 .
+      }
+    }
   }
 }
