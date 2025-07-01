@@ -9,7 +9,7 @@ pipeline{
     stage('Docker build'){
       steps{
         sh 'ls'
-        sh 'docker build -t mvn:1 .'
+        sh 'docker build -t mvn:1 -f Maven-test-project/Dockerfile .'
       }
     }
     stage('Docker run'){
