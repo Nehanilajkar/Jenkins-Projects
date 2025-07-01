@@ -6,6 +6,11 @@ pipeline{
         checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Nehanilajkar/Jenkins-Projects.git']])
       }
     }
+    stage('code Build'){
+      steps{
+        sh 'mvn clean package'
+      }
+    }
     stage('Docker build'){
       steps{
         sh 'ls'
