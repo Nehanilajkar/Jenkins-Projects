@@ -15,6 +15,7 @@ pipeline{
     }
     stage('Docker build'){
       steps{
+        sh 'cd Maven-test-project/Maven-test-project'
         sh 'ls'
         sh 'docker build -t mvn:1 -f Maven-test-project/Dockerfile .'
       }
