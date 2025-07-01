@@ -8,7 +8,7 @@ pipeline{
     }
     stage('code Build'){
       steps{
-        sh 'cd Maven-test-project'
+        sh 'cd Maven-test-project/Maven-test-project'
         sh 'ls'
         sh 'mvn clean package'
       }
