@@ -2,7 +2,7 @@ FROM tomcat:9.0-jdk11
 
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
-COPY my-webapp.war /usr/local/tomcat/webapps/
+COPY target/my-webapp.war /usr/local/tomcat/webapps/
 
 # Expose Tomcat port
 EXPOSE 8080
